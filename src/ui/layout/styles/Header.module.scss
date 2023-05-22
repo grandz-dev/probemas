@@ -1,0 +1,67 @@
+@import "../../../assets/styles/mixins";
+
+.header {
+	padding: 20px 0;
+	background-color: var(--dark);
+
+	.wrapper {
+		@extend %flexAlignCenter;
+	}
+
+	.burger {
+		display: none;
+		z-index: 101;
+	}
+
+	.links {
+		@extend %flexAlignCenter;
+		margin-left: 40px;
+		gap: 32px;
+	}
+
+	.buttons {
+		@extend %flexAlignCenter;
+		margin-left: auto;
+		gap: 20px;
+	}
+
+	@include desktop-sm {
+		.links {
+			margin-left: 20px;
+			gap: 16px;
+		}
+	}
+
+	@include tablet {
+
+		.wrapper {
+			justify-content: space-between;
+			gap: 12px;
+		}
+
+		.logo {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+		}
+
+		.burger {
+			display: flex;
+			flex: 1;
+		}
+
+		.links {
+			display: none;
+		}
+
+		.buttons {
+			flex: 1;
+			justify-content: flex-end;
+			margin-left: unset;
+
+			& > *:not([class*='login']) {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+@import "mixins";
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+	text-decoration: none;
+	touch-action: pan-x pan-y;
+}
+
+a,
+button {
+	background: unset;
+	cursor: pointer;
+}
+
+body {
+	font-family: var(--Poppins), sans-serif;
+	color: var(--dark);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: unset;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.container {
+	max-width: $desktop;
+	padding-left: 70px;
+	padding-right: 70px;
+	width: 100%;
+	margin: 0 auto;
+
+	@include tablet {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+
+	@include tablet-sm {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+h1 {
+	text-align: center;
+	margin-top: 20px	;
+}

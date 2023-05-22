@@ -1,0 +1,44 @@
+@import "../../../assets/styles/mixins";
+
+.button {
+	font-weight: 500;
+	border-radius: 4px;
+	font-size: 14px;
+
+	&.outline {
+		color: #FFFFFF;
+
+		&:hover,
+		&:focus {
+			background: var(--yellow-gradient), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	&.primary {
+		color: var(--dark);
+		background: var(--yellow);
+		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+		padding: 8px 24px;
+
+		&:hover,
+		&:focus {
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), #E9B109;
+		}
+	}
+
+	@include tablet-sm {
+		min-width: 74px;
+
+		&.primary {
+			padding: 6px 12px;
+		}
+
+		&.outline {
+			padding: 6px 12px;
+			border: 1px solid #FFFFFF;
+			filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.15));
+		}
+	}
+}

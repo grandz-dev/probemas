@@ -1,0 +1,116 @@
+@import "../../../assets/styles/mixins";
+
+.currency-select,
+.currency-dropdown {
+
+	&__indicator-separator {
+		display: none;
+	}
+
+	&__indicator {
+		color: #FFFFFF !important;
+		padding: 0 !important;
+		transition: transform .2s ease-in-out !important;
+	}
+
+	&__control {
+		background: none !important;
+		border: none !important;
+		box-shadow: unset !important;
+		min-width: 92px;
+	}
+
+	&__control--menu-is-open .currency-select__indicator {
+		transform: rotate(-180deg);
+	}
+
+	&__placeholder,
+	&__input-container,
+	&__single-value {
+		color: #FFFFFF !important;
+	}
+
+	&__value {
+		color: #FFFFFF !important;
+		font-family: var(--Poppins), sans-serif !important;
+		font-size: 14px;
+	}
+
+	&__value-container {
+		padding-right: 0 !important;
+	}
+
+	&__menu {
+		width: unset !important;
+		background: var(--dark) !important;
+		box-shadow: 0px -1px 5px 2px rgba(49, 66, 75, 0.1) !important;
+		border-radius: 4px !important;
+		color: #FFFFFF;
+	}
+
+	&__menu-list {
+		width: 105px !important;
+	}
+
+	&__option,
+	&__single-value {
+		cursor: pointer !important;
+		display: flex !important;
+		align-items: center !important;
+		gap: 8px;
+	}
+
+	&__option--is-selected {
+		cursor: pointer !important;
+		background-color: rgba(44, 62, 103, 0.2) !important;
+		border-right: 2px solid var(--yellow);
+	}
+
+	&__option--is-focused {
+		background: rgba(44, 62, 103, 0.2) !important;
+	}
+}
+
+
+.currency-dropdown {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+
+	&__control--menu-is-open .currency-dropdown__indicator {
+		transform: rotate(-180deg);
+	}
+
+	&__control--menu-is-open + .currency-dropdown__menu {
+		position: relative !important;
+	}
+
+	&__value-container {
+		padding-left: 0 !important;
+	}
+
+	&__menu-list {
+		width: 100% !important;
+	}
+
+	&__menu {
+		margin-top: 0 !important;
+		width: 100vw !important;
+		box-shadow: unset !important;
+		border-radius: unset !important;
+		margin-left: -16px !important;
+	}
+
+	&__option {
+		padding-left: 16px !important;
+	}
+
+	&__option--is-focused {
+		background: unset !important;
+	}
+
+	&__option--is-selected {
+		-webkit-box-shadow: inset 2px 0 0 0 var(--yellow);
+		-moz-box-shadow: inset 2px 0 0 0 var(--yellow);
+		box-shadow: inset 2px 0 0 0 var(--yellow);
+		border-right: unset;
+	}
+}
